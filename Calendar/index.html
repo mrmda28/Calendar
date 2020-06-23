@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Calendar</title>
 </head>
-<body>
-    
+
+<body onload="renderDate()">
+    <div class="calendar">
+        <!-- Верхняя часть, отображение месяца и года, 
+            переключение месяца -->
+        <div class="top">
+            <!-- Месяц назад -->
+            <div class="prev" onclick="moveDate('prev')">
+                <span>&#10094;</span>
+            </div>
+            <!-- Год и месяц -->
+            <div>
+                <h3 id="year">Год</h3>
+                <h2 id="month">Месяц</h2>
+            </div>
+            <!-- Месяц вперед -->
+            <div class="next" onclick="moveDate('next')">
+                <span>&#10095;</span>
+            </div>
+        </div>
+        <!-- Дни недели -->
+        <div class="weekdays">
+            <div>Пн</div>
+            <div>Вт</div>
+            <div>Ср</div>
+            <div>Чт</div>
+            <div>Пт</div>
+            <div>Сб</div>
+            <div>Вс</div>
+        </div>
+        <!-- Дни -->
+        <div class="days">
+
+        </div>
+    </div>
+    <!-- События -->
+    <div class="events"></div>
     <script src="js/script.js"></script>
 </body>
+
 </html>
