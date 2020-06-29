@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Calendar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        </style>
 </head>
 
 <body onload="renderDate()">
@@ -16,6 +19,7 @@
             <!-- Месяц назад -->
             <div class="prev" onclick="moveDate('prev')">
                 <span>&#10094;</span>
+                <p id="prevm">Месяц</p>
             </div>
             <!-- Год и месяц -->
             <div>
@@ -24,27 +28,44 @@
             </div>
             <!-- Месяц вперед -->
             <div class="next" onclick="moveDate('next')">
+                <p id="nextm">Месяц</p>
                 <span>&#10095;</span>
             </div>
         </div>
         <!-- Дни недели -->
         <div class="weekdays">
-            <div>Пн</div>
-            <div>Вт</div>
-            <div>Ср</div>
-            <div>Чт</div>
-            <div>Пт</div>
-            <div>Сб</div>
-            <div>Вс</div>
+            <div>ПН</div>
+            <div>ВТ</div>
+            <div>СР</div>
+            <div>ЧТ</div>
+            <div>ПТ</div>
+            <div>СБ</div>
+            <div>ВС</div>
         </div>
         <!-- Дни -->
-        <div class="days">
+        <div class="days"></div>
+    </div>
+    <!--Мероприятия-->
+    <div class="events">
+        <div><h1 id="date-events">Дата</h1></div>
+        <div class="event">
+            <p>Мероприятия:</p>
+            <ul>
+                <li>активное</li>
+                <li>бла</li>
+                <li>бла</li>
+                <li>бла</li>
+                <li>бла</li>
+            </ul>
+        </div>
+        <div class="opis">
 
         </div>
+
     </div>
     <!-- События -->
-    <div class="events"></div>
     <script src="js/script.js"></script>
+    
 </body>
 
 </html>
