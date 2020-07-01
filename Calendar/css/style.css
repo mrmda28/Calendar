@@ -141,16 +141,14 @@
     width: 50%;
 }
 
-.event li{
+.event h4{
     
     background-color:#27ae60;
     list-style-type:circle;
     margin-top:10px;
     padding-left:20px ;
 }
-.event ul,p{
-    margin-left: 20px;
-}
+
 .events h1 {
     text-align: center;
 }
@@ -159,12 +157,6 @@
     font-size:25px;
     font-weight: 900;
 
-}
-.event li:hover{
-    cursor: pointer;
-    background-color: #fff;
-    color:#27ae60;
-    outline: 2px solid #27ae60;
 }
 
 #prevm, #nextm {

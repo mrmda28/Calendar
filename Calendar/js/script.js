@@ -1,6 +1,9 @@
 let dt = new Date();
+let y, m, d;
 
 function renderDate() {
+
+    // Calendar
     dt.setUTCDate(1);
     let day = dt.getUTCDay();
     let today = new Date();
@@ -54,12 +57,18 @@ for (i = 1; i <= endDate; i++) {
         cells += "<div id='day" + i + "' onclick='getDateEvents(id)'>" + i + "</div>";
 }
 document.getElementsByClassName("days")[0].innerHTML = cells;
-let merDate = document.getElementsByClassName("today")[0].innerHTML + "." + (dt.getUTCMonth()+1 + "." + dt.getUTCFullYear());
-document.getElementById("date-events").innerHTML = merDate; //Временно
+// for для рамки
+
+let eventDate = document.getElementsByClassName("today")[0].innerHTML + "." + (dt.getUTCMonth()+1 + "." + dt.getUTCFullYear());
+document.getElementById("date-events").innerHTML = eventDate; //Временно
+
 }
 
 function getDateEvents(id) {
-    document.getElementById("date-events").innerHTML = document.getElementById(id).innerHTML + "." + (dt.getUTCMonth()+1 + "." + dt.getUTCFullYear());
+    y = dt.getUTCFullYear();
+    m = dt.getUTCMonth()+1;
+    d = document.getElementById(id).innerHTML
+    document.getElementById("date-events").innerHTML = d + "." + (m + "." + y);
 }
 
 function moveDate(button) {
@@ -70,4 +79,3 @@ function moveDate(button) {
     }
     renderDate();
 }
-
