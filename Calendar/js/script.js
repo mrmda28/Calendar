@@ -3,7 +3,7 @@ const daysE = document.querySelector(".days"),
       eventT = document.querySelector(".eventTitle"),
       eventD = document.querySelector(".eventText");
 let dt = new Date();
-let y, m, d, dayDate, status;
+let y, m, d, dayDate;
 
 function renderDate() {
 

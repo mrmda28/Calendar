@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calendar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        </style>
+</head>
+
+<body onload="renderDate()">
+    <div class="calendar">
+        <!-- Верхняя часть, отображение месяца и года, 
+            переключение месяца -->
+        <div class="top">
+            <!-- Месяц назад -->
+            <div class="prev" onclick="moveDate('prev')">
+                <span>&#10094;</span>
+                <p id="prevm">Месяц</p>
+            </div>
+            <!-- Год и месяц -->
+            <div>
+                <h3 id="year">Год</h3>
+                <h2 id="month">Месяц</h2>
+            </div>
+            <!-- Месяц вперед -->
+            <div class="next" onclick="moveDate('next')">
+                <p id="nextm">Месяц</p>
+                <span>&#10095;</span>
+            </div>
+        </div>
+        <!-- Дни недели -->
+        <div class="weekdays">
+            <div>ПН</div>
+            <div>ВТ</div>
+            <div>СР</div>
+            <div>ЧТ</div>
+            <div>ПТ</div>
+            <div>СБ</div>
+            <div>ВС</div>
+        </div>
+        <!-- Дни -->
+        <div class="days" ></div>
+    </div>
+    <!--Мероприятия-->
+   
+    <div class="events" >
+        <div><h1 id="date-events">Дата</h1></div> 
+        <div class="ev">
+        <div class="event" >
+            <p>Мероприятия:</p>
+            <ul>
+                <div class="li1">
+                    <img src="img/olen.svg" alt="" srcset="">
+                <li>Традиционное</li>
+                </div>
+                <div class="li1">
+                    <img src="img/maindate.svg" alt="" srcset="">
+                <li>Важные даты</li>
+                </div>
+                <div class="li1">
+                    <img src="img/prof.svg" alt="" srcset="">
+                <li>Профессиональные</li>
+                </div>
+                <div class="li1">
+                    <img src="img/vospit.svg" alt="" srcset="">
+                <li>Воспитательные</li>
+                </div>
+                <div class="li1">
+                    <img src="img/sport.svg" alt="" srcset="">
+                <li>Спортивные</li>
+                </div>
+                <div class="li1">
+                    <img src="img/nau.svg" alt="" srcset="">
+                <li>Научные</li>
+                </div>
+            </ul>
+        </div>
+        <div class="opis" id="box">
+
+        </div>
+    </div>
+    </div>
+    <!-- События -->
+    <script src="js/script.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+</body>
+
+</html>
